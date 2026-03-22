@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center px-6 overflow-hidden">
+    <section className="relative min-h-[70vh] flex items-center justify-center px-6 pt-24 pb-16 overflow-hidden">
       {/* Background glow */}
       <div className="absolute top-[-200px] left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[radial-gradient(circle,rgba(14,165,233,0.08)_0%,transparent_70%)] pointer-events-none" />
 
