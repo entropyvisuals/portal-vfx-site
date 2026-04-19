@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Portal Creative Management",
   description:
-    "Business problems, solved with custom integrations you own. You describe what is broken. Portal builds the fix. You own the code.",
+    "Business problems, solved with custom integrations you own.",
   openGraph: {
     title: "Portal Creative Management",
     description: "Business problems, solved with custom integrations you own.",
