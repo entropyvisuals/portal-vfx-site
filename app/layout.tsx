@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Portal Creative Management — Business Automation",
+  title: "Portal Creative Management",
   description:
-    "Custom automation systems for small businesses. AI-powered scheduling, follow-ups, document handling, and reporting. Based in Agoura Hills, CA.",
+    "Business problems, solved with custom integrations you own. You describe what is broken. Portal builds the fix. You own the code.",
   openGraph: {
     title: "Portal Creative Management",
-    description: "We automate your business.",
+    description: "Business problems, solved with custom integrations you own.",
     url: "https://portal-vfx.com",
     siteName: "Portal Creative Management",
     type: "website",
@@ -20,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
@@ -29,11 +29,11 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap"
           rel="stylesheet"
         />
       </head>
-      <body className="font-sans">{children}</body>
+      <body className="antialiased bg-background text-foreground">{children}</body>
     </html>
   );
 }

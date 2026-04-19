@@ -1,26 +1,77 @@
 @import "tailwindcss";
 
 @theme {
-  --color-bg: #0a0b0e;
-  --color-bg-card: #111318;
-  --color-bg-card-hover: #1a1d25;
-  --color-border: rgba(255, 255, 255, 0.06);
-  --color-border-hover: rgba(255, 255, 255, 0.12);
-  --color-accent: #0ea5e9;
-  --color-accent-dark: #0284c7;
-  --color-text: #e4e4e7;
-  --color-text-muted: #a1a1aa;
-  --color-text-dim: #71717a;
-  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --color-background: #07090c;
+  --color-foreground: #e8ecf2;
+  --color-muted: #0f131a;
+  --color-muted-foreground: #8892a1;
+  --color-accent: #f59e0b;
+  --color-accent-strong: #fbbf24;
+  --color-border: #1a2030;
+
+  --font-sans: "Geist", "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, "SFMono-Regular", "Menlo", monospace;
+
+  --max-width-prose: 68ch;
 }
 
 html {
   scroll-behavior: smooth;
+  color-scheme: dark;
 }
 
 body {
-  background: var(--color-bg);
-  color: var(--color-text);
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "ss01", "cv11";
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+.text-pretty {
+  text-wrap: pretty;
+}
+
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@keyframes spinReverse {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.45; }
+  50% { opacity: 0.85; }
+}
+.spin-slow { animation: spinSlow 120s linear infinite; transform-origin: center; }
+.spin-rev  { animation: spinReverse 90s linear infinite; transform-origin: center; }
+.spin-fast { animation: spinSlow 40s linear infinite; transform-origin: center; }
+.pulse     { animation: pulseGlow 6s ease-in-out infinite; }
+
+.grid-bg {
+  background-image:
+    linear-gradient(var(--color-border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-border) 1px, transparent 1px);
+  background-size: 80px 80px;
+  background-position: -1px -1px;
+  opacity: 0.4;
+}
+
+.scanlines {
+  background-image: repeating-linear-gradient(
+    0deg,
+    rgba(245, 158, 11, 0.02) 0px,
+    rgba(245, 158, 11, 0.02) 2px,
+    transparent 2px,
+    transparent 4px
+  );
 }
