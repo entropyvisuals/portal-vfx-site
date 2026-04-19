@@ -369,15 +369,10 @@ export default function Home() {
             <span className="text-accent">custom integrations you own.</span>
           </h1>
 
-          <p className="mt-10 text-xl md:text-2xl font-light text-muted-foreground leading-relaxed text-pretty">
-            You describe what is broken. Portal builds the fix. When it ships,
-            the code is yours, it runs on your infrastructure, and it is paid
-            for once.
-          </p>
         </div>
 
         <footer className="relative z-10 flex items-center justify-between font-mono text-[11px] tracking-[0.2em] uppercase text-muted-foreground">
-          <span>Est. 2024 · Oak Park, CA</span>
+          <span>Est. 2025 · Agoura Hills, CA</span>
           <span className="hidden md:inline">↓</span>
           <a href="#start" className="text-accent hover:text-accent-strong">
             hello@portal-vfx.com
@@ -537,7 +532,7 @@ export default function Home() {
 
       {/* ─── FOOTER ─── */}
       <footer className="border-t border-border px-6 md:px-12 lg:px-20 py-10 font-mono text-[11px] tracking-[0.2em] uppercase text-muted-foreground flex flex-wrap gap-4 justify-between">
-        <span>© Portal Creative Management · Oak Park, CA</span>
+        <span>© Portal Creative Management · Agoura Hills, CA</span>
         <div className="flex gap-6">
           <a href="https://yanickwilisky.com" className="hover:text-foreground">
             Yanick ↗

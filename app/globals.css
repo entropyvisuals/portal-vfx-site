@@ -20,6 +20,18 @@ html {
   color-scheme: dark;
 }
 
+/* Aliases so inline SVGs referencing var(--accent) etc. resolve */
+:root {
+  --accent: var(--color-accent);
+  --accent-strong: var(--color-accent-strong);
+  --background: var(--color-background);
+  --foreground: var(--color-foreground);
+  --muted: var(--color-muted);
+  --muted-foreground: var(--color-muted-foreground);
+  --border: var(--color-border);
+  --font-geist-mono: var(--font-mono);
+}
+
 body {
   background: var(--color-background);
   color: var(--color-foreground);
